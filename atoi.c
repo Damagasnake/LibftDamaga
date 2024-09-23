@@ -13,15 +13,17 @@
 #include "libft.h"
 int atoi(const char *str)
 {
-    int i;
+	int i;
 	int Nsing;
-    i = 0;
+	int res;
+	i = 0;
 	Nsing = -1;
-    while (ft_isspace)
-    {
-		str++;
-    }
-    if (str[i] == "+" && str[i + 1] != "-")
+	res = 0;
+	while (ft_isspace)
+		{
+			str++;
+		}
+	if (str[i] == "+" && str[i + 1] != "-")
 	{
 		i++;
 	}
@@ -29,10 +31,4 @@ int atoi(const char *str)
 	{
 		Nsing == -1;
 	}
-	while (str[i] && str[i] >= 0 && str[i] <= 9)
-	{
-		/* code */
-	}
-	
-	
 }
