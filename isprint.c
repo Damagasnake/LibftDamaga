@@ -6,11 +6,12 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:57:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/16 14:58:33 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:08:12 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 int	ft_isalnum(int c)
 {
 	if (c >= 32 && c <= 126)

@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 13:37:37 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:04:15 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int memcmp(const void *s1, const void *s2, size_t n);
 char *strnstr(const char *big,	const char *little, size_t len);
+int ft_isspace(char c);
 #endif

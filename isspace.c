@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   isspace.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 15:03:32 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:09:29 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/23 14:01:45 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/23 14:08:24 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-int	ft_strlen(int *str)
+int ft_isspace(char c) 
 {
-	int	cont0;
-	cont0 = 0;
-	while (str[cont0] != '\0')
-	{
-		cont0++;
-	}
-	return(cont0);
+    if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r') {
+        return 0;
+    }
+    return 1;
 }

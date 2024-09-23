@@ -6,11 +6,12 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 09:58:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/20 10:05:53 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:10:16 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 int toupper(int c)
 {
     if (c >= 97  && c <= 122)

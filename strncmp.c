@@ -6,11 +6,12 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 15:03:37 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/22 16:50:35 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:09:40 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //I cast every single time because is more optimun than creating a "casted variable"
+#include "libft.h"
 #include <unistd.h>
 int strncmp(const char *s1, const char *s2, size_t n)
 {

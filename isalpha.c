@@ -6,11 +6,12 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:11:51 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/16 13:05:37 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:07:50 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 /*void	ft_isalpha(int	*str)
 {
 	int	cont0;

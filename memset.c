@@ -6,10 +6,11 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 09:48:44 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/17 12:31:18 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:08:58 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 void *ft_memset(void *s, int c, size_t n)
 {

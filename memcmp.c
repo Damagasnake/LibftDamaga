@@ -6,10 +6,11 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 17:53:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/22 18:09:01 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:08:37 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 int memcmp(const void *s1, const void *s2, size_t n)
 {

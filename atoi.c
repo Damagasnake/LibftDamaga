@@ -6,13 +6,18 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:50:22 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 10:53:50 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:07:06 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 int atoi(const char *nptr)
 {
+    int i;
+    i = 0;
+    while (ft_isspace)
+    {
+        /* code */
+    }
     
 }

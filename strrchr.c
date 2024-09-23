@@ -6,11 +6,12 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:58:34 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/22 14:53:27 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:10:02 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 char *strrchr(const char *s, int c)
 {
 	int x;

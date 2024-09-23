@@ -6,11 +6,11 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:47:53 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/19 15:37:23 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:08:49 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 #include <unistd.h>
 void *ft_memmove(void *dest, const void *src, size_t n)
 {

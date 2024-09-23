@@ -6,10 +6,11 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 15:12:29 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/20 09:54:58 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/23 14:09:15 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 strlcat(char *dst, const char *src, size_t n)
 {
