@@ -11,13 +11,28 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-int atoi(const char *nptr)
+int atoi(const char *str)
 {
     int i;
+	int Nsing;
     i = 0;
+	Nsing = -1;
     while (ft_isspace)
     {
-        /* code */
+		str++;
     }
-    
+    if (str[i] == "+" && str[i + 1] != "-")
+	{
+		i++;
+	}
+	if (str[i] == "-")
+	{
+		Nsing == -1;
+	}
+	while (str[i] && str[i] >= 0 && str[i] <= 9)
+	{
+		/* code */
+	}
+	
+	
 }
