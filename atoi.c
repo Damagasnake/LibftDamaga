@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 10:50:22 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:07:06 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/24 10:09:45 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,24 @@ int atoi(const char *str)
 	i = 0;
 	Nsing = -1;
 	res = 0;
-	while (ft_isspace)
+	while (ft_isspace )
 		{
 			str++;
 		}
-	if (str[i] == "+" && str[i + 1] != "-")
+	if (str[i] == "-")
 	{
+		Nsing = -1;
 		i++;
 	}
 	if (str[i] == "-")
 	{
 		Nsing == -1;
 	}
+	while (str[i])
+	{
+		res = res*10 + str[i] - '0';
+		i++;
+	}
+	return (Nsing *res);
+	
 }
-//Tomorrow
