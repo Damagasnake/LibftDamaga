@@ -6,12 +6,13 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/24 10:52:34 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/25 10:52:08 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+#include <unistd.h>
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);

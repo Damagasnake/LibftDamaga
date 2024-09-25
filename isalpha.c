@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:11:51 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:07:50 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/25 11:34:25 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,14 @@ int	ft_isalpha(int c)
 	}
 	else
 		return (0);
+}
+#include <stdio.h>
+int main(void)
+{
+	int c;
+	int res;
+	c = 'l';
+	res = ft_isalpha(c);
+	printf("El entero es: %i\n",res);
+	return(0);
 }

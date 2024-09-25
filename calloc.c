@@ -1,17 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isspace.c                                          :+:      :+:    :+:   */
+/*   calloc.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 14:01:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/25 11:56:55 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/25 10:27:11 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/25 11:11:30 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isspace(char c) 
+void	*calloc(size_t count, size_t size)
 {
-    if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r')
+	size_t totsize;
+	totsize = (count * size);
+	void *ptr = malloc(totsize);
+	if (count == 0 || size == 0)
+		{
+			return malloc(0);
+		}
+		if (totsize / size != count)
+		{
+			return (NULL);
+		}
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	ft_memset(ptr, 0, totsize);
+	return(ptr);
 }
