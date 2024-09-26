@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:58:34 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:10:02 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:07:24 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *strrchr(const char *s, int c)
 		
 		if (s[x] == i)
 		{
-			return ((char*)s + x);
+			return ((char*)s[x]);
 		}
 		x--;
 	}

@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/25 10:52:08 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/26 11:09:37 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void *ft_memset(void *s, int c, size_t n);
 void bzero(void *s, size_t n);
 void *memcpy(void *dest, const void *src, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
-strlcpy(char *dst, const char *src, size_t n);
-strlcat(char *dst, const char *src, size_t n);
+size_t strlcpy(char *dst, const char *src, size_t n);
+size_t strlcat(char *dst, const char *src, size_t n);
 int toupper(int c);
 int tolower(int c);
 char *strchr(const char *s, int c);
@@ -35,4 +35,5 @@ int memcmp(const void *s1, const void *s2, size_t n);
 char *strnstr(const char *big,	const char *little, size_t len);
 int ft_isspace(char c);
 int atoi(const char *str);
+void *calloc(size_t count, size_t size);
 #endif

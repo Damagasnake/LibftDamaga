@@ -6,12 +6,11 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 09:11:14 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/25 11:53:44 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/25 12:52:43 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
  char *strnstr(const char *big,	const char *little, size_t len)
  {
 	size_t i;
