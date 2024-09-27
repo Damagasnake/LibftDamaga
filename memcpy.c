@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 14:46:36 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:08:44 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:59:55 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 void *memcpy(void *dest, const void *src, size_t n)
 {
-	int i;
+	size_t i;
 	unsigned char *source;
 	unsigned char *destino;
 	
