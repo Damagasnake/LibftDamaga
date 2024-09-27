@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 12:43:36 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/26 09:35:37 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/27 12:03:42 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/27 12:23:11 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *strdup(const char *s)
+int putchar(int c, int fd )
 {
-    char *ptr;
-    ptr = (char *) malloc(sizeof(s));
+    write(fd, &c, 1);
 }
