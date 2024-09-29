@@ -18,9 +18,6 @@ int tolower(int c)
     {
         c = c + 32; 
     }
-<<<<<<< HEAD:isspace.c
     return 1;
-=======
     return (c);
->>>>>>> cef49f1c8d92b5cbc46a743cf9886a0e9ffe0414:ft_tolower.c
 }
