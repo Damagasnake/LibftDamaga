@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   strdup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 09:58:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:10:16 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/25 12:43:36 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/27 10:31:13 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-int toupper(int c)
+#include <stdlib.h>
+#include <string.h>
+
+char *strdup(const char *s)
 {
-    if (c >= 97  && c <= 122)
-    {
-        c - 32; 
-    }
-    return (c);
+    char *ptr = (char *) malloc(strlen(s) + 1);
+    if (ptr == NULL)
+        return NULL;
+    strcpy(ptr, s);    
+    return ptr;
 }

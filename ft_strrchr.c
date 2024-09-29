@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcmp.c                                           :+:      :+:    :+:   */
+/*   strrchr.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/22 17:53:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:08:37 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/20 14:58:34 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/26 11:07:24 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
-int memcmp(const void *s1, const void *s2, size_t n)
+#include "libft.h"
+char *strrchr(const char *s, int c)
 {
-    unsigned char *str1;
-	unsigned char *str2;
-	size_t i;
-	i = 0;
-	while(i <= n)
+	int x;
+	x = 0;
+	char i;
+	i = (char) c;
+	while (s[x])
 	{
-		if (str1[i] != str2[i])
-		{
-			return str1[i] - str2[i];
-		}
+		x++;
 	}
-	return (0);
+	while (x >= 0 )
+	{
+		
+		if (s[x] == i)
+		{
+			return ((char*)s[x]);
+		}
+		x--;
+	}
+			return (NULL);
 }

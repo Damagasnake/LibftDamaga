@@ -1,30 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcpy.c                                           :+:      :+:    :+:   */
+/*   isalpha.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 14:46:36 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:08:44 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/16 12:11:51 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/26 12:25:36 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
-void *memcpy(void *dest, const void *src, size_t n)
+#include "libft.h"
+/*void	ft_isalpha(int	*str)
 {
-	int i;
-	unsigned char *source;
-	unsigned char *destino;
-	
-	i = 0;
-	source = (unsigned char *) src;
-	destino = (unsigned char *) dest;
-	while (i < n)
+	int	cont0;
+	cont0 = 0;
+	while (str[cont0] != '\0' && str[cont0 <= 65 || >= 90])
 	{
-		destino[i] = source[i];
-		i++;
+		cont0++;
+		return('0')
+		else return ('1')
 	}
-	return (destino);
+	
+}*/
+int	ft_isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+	else
+		return (0);
+}
+#include <stdio.h>
+int main(void)
+{
+	int c;
+	int res;
+	c = 'l';
+	res = ft_isalpha(c);
+	printf("El entero es: %i\n",res);
+	return(0);
 }

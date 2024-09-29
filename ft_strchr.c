@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isspace.c                                          :+:      :+:    :+:   */
+/*   strchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 14:01:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:08:24 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/20 10:32:47 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/27 09:58:48 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_isspace(char c) 
+#include <unistd.h>
+
+char *ft_strchr(const char *s, int c)
 {
-    if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r') {
-        return 0;
+    int x;
+
+    x = 0;
+    while (s[x])
+    {
+        if (s[x] == (char)c)
+        {
+            return (char *)&s[x];
+        }
+        x++;
     }
-    return 1;
+    if (s[x] == (char)c)
+    {
+        return (char *)&s[x];
+    }
+    return (NULL);
 }

@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strnstr.c                                          :+:      :+:    :+:   */
+/*   tolower.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 09:11:14 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:09:50 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/20 10:09:59 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/26 09:59:59 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
- char *strnstr(const char *big,	const char *little, size_t len)
- {
-	size_t i;
-	size_t x;
-	i = 0;
-	x = 0;
-	if (little[i] == '\0')
-	{
-		return (big);
-	}
-	while (big[x] && i < len)
-	{
-		while (big[i + x] == little[x] && big[i + x] && i + x < len)
-		{
-			x++;
-		}
-		i++;
-	}
- }
+#include "libft.h"
+int tolower(int c)
+{
+    if (c >= 65  && c <= 90)
+    {
+        c = c + 32; 
+    }
+<<<<<<< HEAD:isspace.c
+    return 1;
+=======
+    return (c);
+>>>>>>> cef49f1c8d92b5cbc46a743cf9886a0e9ffe0414:ft_tolower.c
+}

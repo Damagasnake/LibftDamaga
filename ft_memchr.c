@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 12:11:51 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:07:50 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/22 16:58:35 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/26 12:41:43 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-/*void	ft_isalpha(int	*str)
+#include <unistd.h>
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	int	cont0;
-	cont0 = 0;
-	while (str[cont0] != '\0' && str[cont0 <= 65 || >= 90])
+	const unsigned char *strng;
+	unsigned char Uc;
+	size_t i;
+	strng = s;
+	Uc = c;
+	i = 0;
+	while (i < n)
 	{
-		cont0++;
-		return('0')
-		else return ('1')
+		if(strng[i] == Uc)
+		{
+		return ((void *) &strng[i]);
+		i++;	
+		}
 	}
-	
-}*/
-int	ft_isalpha(int c)
-{
-	if (c >= 65 && c <= 90 || c >= 97 && c <= 122)
-	{
-		return (1);
-	}
-	else
-		return (0);
+	return (NULL);
 }
