@@ -37,6 +37,5 @@ int atoi(const char *str)
 		res = res*10 + str[i] - '0';
 		i++;
 	}
-	return (Nsing *res);
-	
+	return (Nsing *res);	
 }
