@@ -32,6 +32,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 		start++;
 	}
-	str2[i] = 0;
+	str2[i] = '\0';
 	return(str2);
 }
