@@ -36,4 +36,5 @@ char *strnstr(const char *big,	const char *little, size_t len);
 int ft_isspace(char c);
 int atoi(const char *str);
 void *calloc(size_t count, size_t size);
+char *strdup(const char *s);
 #endif
