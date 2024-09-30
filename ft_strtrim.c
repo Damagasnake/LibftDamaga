@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 12:46:42 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/30 09:36:52 by davidma2         ###   ########.fr       */
+/*   Created: 2024/09/30 14:51:28 by davidma2          #+#    #+#             */
+/*   Updated: 2024/09/30 15:09:21 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl_fd(char *s, int fd)
+#include "libft.h"
+char *ft_strtrim(char const *s1, char const *set)
 {
-	int i;
-	i = 0;
-    while (s[i])
-    {
-        write(fd, &s, 1);
-        i++;
-    }
-	s[i] = '\n';
+	int i, x;
+	i, x = 0;
+	char const *final;
+	final = (char *)malloc(ft_strlen(s1))
+	
 }

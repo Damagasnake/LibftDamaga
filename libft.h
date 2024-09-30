@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/26 11:09:37 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:41:04 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ int ft_isspace(char c);
 int atoi(const char *str);
 void *calloc(size_t count, size_t size);
 char *strdup(const char *s);
+void ft_putstr_fd(char *s, int fd);
+void ft_putendl_fd(char *s, int fd);
 #endif

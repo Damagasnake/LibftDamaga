@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 20:59:55 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/29 20:59:55 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:31:57 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 void ft_putstr_fd(char *s, int fd)
 {
-    while (s)
+    while (*s)
     {
         write(fd, &s, 1);
         s++;
