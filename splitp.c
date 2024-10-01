@@ -13,33 +13,32 @@
 #include "libft.h"
 char **ft_split(char const *s, char c)
 {
-	int nstr; // Number of new substrs. to generate
-	int i; // scan *s.
-	int start; // Locate the start of each substr.
-	char *substr; //Work with each substr. b4 res.
-	char **res; // Storage substr.
-	int len; // Lenght of each substr.
-	int index; // Pos. in res.
+	int nstr = 0;	  // Number of new substrs. to generate
+	int i = 0;		  // scan *s.
+	int start;	  // Locate the start of each substr.
+	char *substr; // Work with each substr. b4 res.
+	char **res;	  // Storage substr.
+	int len;	  // Lenght of each substr.
+	int index = 0;	  // Pos. in res.
 	if (s == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
-	while(s[i] && s[i] + 1 != c && s[i] != c)
+	while (s[i] && s[i + 1] != c && s[i] != c)
 	{
 		i++;
 	}
-	nstr = 0;
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		if (s[i] == c)
 		{
 			i++;
 		}
-			else
-			{
+		else
+		{
 			nstr++;
-			while(s[i] && s[i] != c)
+			while (s[i] && s[i] != c)
 			{
 				i++;
 			}
@@ -48,11 +47,11 @@ char **ft_split(char const *s, char c)
 	res = (char **)malloc(sizeof(char *) * (nstr + 1));
 	if (res == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	i = 0;
 	index = 0;
-	while(s[i])
+	while (s[i])
 	{
 		if (s[i] == c)
 		{
@@ -61,7 +60,7 @@ char **ft_split(char const *s, char c)
 		else
 		{
 			start = i;
-			while(s[i] && s[i] != c)
+			while (s[i] && s[i] != c)
 			{
 				i++;
 			}
@@ -69,7 +68,12 @@ char **ft_split(char const *s, char c)
 			substr = (char *)malloc(sizeof(char) * (len + 1));
 			if (substr == NULL)
 			{
-			    return(NULL);
+				while (index > 0)
+				{
+					free(res[--index]);
+				}
+				free(res);
+				return (NULL);
 			}
 			ft_strlcpy(substr, s + start, len + 1);
 			res[index] = substr;
@@ -77,5 +81,5 @@ char **ft_split(char const *s, char c)
 		}
 	}
 	res[index] = NULL;
-	return(res);
+	return (res);
 }
