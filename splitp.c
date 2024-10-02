@@ -6,20 +6,25 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/01 17:41:41 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/02 10:11:50 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
-	int nstr = 0;	  // Number of new substrs. to generate
-	int i = 0;		  // scan *s.
-	int start;	  // Locate the start of each substr.
-	char *substr; // Work with each substr. b4 res.
-	char **res;	  // Storage substr.
-	int len;	  // Lenght of each substr.
-	int index = 0;	  // Pos. in res.
+	int		nstr;
+	int		i;
+	int		start;
+	char	*substr;
+	char	**res;
+	int		len;
+	int		index;
+
+	index = 0;
+	nstr = 0;
+	i = 0;
 	if (s == NULL)
 	{
 		return (NULL);
