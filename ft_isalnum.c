@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:30:29 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/26 12:22:02 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:04:54 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
+#include <unistd.h>
+
 int	ft_isalnum(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
 	{
-		return(1);
+		return (1);
 	}
 	else
-		return(0);
+		return (0);
 }

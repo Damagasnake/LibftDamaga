@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 09:48:44 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:08:58 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/02 10:20:50 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
-void *ft_memset(void *s, int c, size_t n)
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *ptr = (unsigned char *) s;
-	int cont0;
+	unsigned char	*ptr;
+	int				cont0;
+
+	ptr = (unsigned char *)s;
 	cont0 = 0;
 	while (ptr[cont0] != '\0' && n < ptr[cont0])
 	{
 		ptr[cont0] = c;
 		cont0++;
 	}
-	return(ptr);
+	return (ptr);
 }

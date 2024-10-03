@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isascii.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:45:06 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:07:57 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:06:51 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-int	ft_isascii (int c)
+#include <unistd.h>
+
+int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 255)
+	if (c >= 0 && c <= 127)
 	{
-		return(1);
+		return (1);
 	}
 	else
-		return(0);
+		return (0);
 }

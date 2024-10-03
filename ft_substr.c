@@ -3,29 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 21:05:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/30 09:53:43 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:22:18 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
-char *ft_substr(char const *s, unsigned int start, size_t len)
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    char *str2;
-    size_t i;
+	char	*str2;
+	size_t	i;
+
 	str2 = NULL;
-    i = 0;
-	if (!s || (str2 = (char *)malloc (len + 1)))
-	{
-		return(NULL);
-	}
-	if (start > ft_strlen(s))
-	{
+	i = 0;
+	if (!s || start >= ft_strlen(s))
 		return (ft_strdup(""));
-	}
+	if (!(str2 = (char *)malloc(len + 1)))
+		return (NULL);
 	while (len--)
 	{
 		str2[i] = s[start];
@@ -33,5 +30,5 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 	}
 	str2[i] = '\0';
-	return(str2);
+	return (str2);
 }

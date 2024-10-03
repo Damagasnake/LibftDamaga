@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memchr.c                                           :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 16:58:35 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/26 12:41:43 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/02 10:20:21 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
-void *ft_memchr(const void *s, int c, size_t n)
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char *strng;
 	unsigned char Uc;
@@ -22,10 +23,10 @@ void *ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if(strng[i] == Uc)
+		if (strng[i] == Uc)
 		{
-		return ((void *) &strng[i]);
-		i++;	
+			return ((void *)&strng[i]);
+			i++;
 		}
 	}
 	return (NULL);

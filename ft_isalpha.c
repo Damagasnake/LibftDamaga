@@ -1,45 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 12:11:51 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/26 12:25:36 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:05:58 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-/*void	ft_isalpha(int	*str)
-{
-	int	cont0;
-	cont0 = 0;
-	while (str[cont0] != '\0' && str[cont0 <= 65 || >= 90])
-	{
-		cont0++;
-		return('0')
-		else return ('1')
-	}
-	
-}*/
+#include <unistd.h>
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
 	{
 		return (1);
 	}
 	else
+	{
 		return (0);
-}
-#include <stdio.h>
-int main(void)
-{
-	int c;
-	int res;
-	c = 'l';
-	res = ft_isalpha(c);
-	printf("El entero es: %i\n",res);
-	return(0);
+	}
 }

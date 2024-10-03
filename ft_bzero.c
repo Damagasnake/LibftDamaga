@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 12:42:04 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/25 11:51:36 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:01:09 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-void bzero(void *s, size_t n)
+#include <unistd.h>
+
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

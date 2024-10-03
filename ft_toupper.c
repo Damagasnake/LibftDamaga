@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 09:58:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/26 10:00:12 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 14:32:29 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-int toupper(int c)
+#include <unistd.h>
+
+int	ft_toupper(int c)
 {
-    if (c >= 97  && c <= 122)
-    {
-      c = c - 32; 
-    }
-    return (c);
+	if (c >= 'a' && c <= 'z')
+	{
+		c = c - 32;
+	}
+	return (c);
 }

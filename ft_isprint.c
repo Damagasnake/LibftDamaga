@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:57:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/23 14:08:12 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/03 10:07:35 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-int	ft_isalnum(int c)
+#include <unistd.h>
+
+int ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
-		return(1);
+		return (1);
 	}
 	else
-		return(0);
+		return (0);
 }

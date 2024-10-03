@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:03:42 by davidma2          #+#    #+#             */
-/*   Updated: 2024/09/27 12:23:11 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/02 10:20:58 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int putchar(int c, int fd )
+
+int	putchar(int c, int fd)
 {
-    write(fd, &c, 1);
+	write(fd, &c, 1);
 }
