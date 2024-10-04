@@ -6,14 +6,14 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:57:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/03 10:07:35 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/04 09:44:38 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{

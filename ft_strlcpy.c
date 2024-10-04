@@ -6,18 +6,19 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 10:31:14 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/02 10:24:15 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/04 09:39:00 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-strlcpy(char *dst, const char *src, size_t n)
+ft_strlcpy(char *dst, const char *src, size_t n)
 {
-	size_t i;
+	size_t	i;
+
 	i = 0;
-	while (src[i] != '\0' && src[i] < n)
+	while (src[i] && src[i] < n)
 	{
 		dst[i] = src[i];
 		i++;

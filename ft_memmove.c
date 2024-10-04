@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:47:53 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/02 10:20:41 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/04 09:46:24 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			destino[cont0] = source[cont1];
 		}
 	}
-	return (destino);
-	int ft_strlen(int *str);
+	else
+	{
+		while (cont0 < n)
+		{
+			destino[cont0] = source[cont0];
+			cont0++;
+		}
+	}
+	return (dest);
 }
-
-// Terminar
