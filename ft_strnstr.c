@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 09:11:14 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/04 09:30:48 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/07 09:55:02 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	x = 0;
 	if (little[i] == '\0')
 	{
-		return (big);
+		return ((char *)big);
 	}
 	while (big[x] && i < len)
 	{
