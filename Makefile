@@ -6,7 +6,7 @@
 #    By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/26 10:00:31 by davidma2          #+#    #+#              #
-#    Updated: 2024/10/07 09:46:34 by davidma2         ###   ########.fr        #
+#    Updated: 2024/10/07 15:06:01 by davidma2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $@ $^
 
-%.o: %.c $(INCLUDE)
+%.o: %.c $(HEAD)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
