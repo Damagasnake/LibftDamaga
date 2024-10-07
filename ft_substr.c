@@ -6,13 +6,11 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 21:05:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 10:03:06 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/07 19:09:58 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <unistd.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
