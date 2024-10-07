@@ -6,7 +6,7 @@
 #    By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/26 10:00:31 by davidma2          #+#    #+#              #
-#    Updated: 2024/10/07 12:14:28 by davidmartin      ###   ########.fr        #
+#    Updated: 2024/10/07 13:03:20 by davidmartin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,6 @@ HEAD = libft.h
 
 AR = ar rcs
 RM = rm -f
-
-
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:33:04 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 12:36:41 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/07 16:07:04 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,12 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	len = countdigits(n);
-	str = (char *)(malloc(sizeof(char) * len + 1));
+	if(i < 0) 
+	str = (char *)(malloc(sizeof(char) * len + 2));
+	else if (i > 0)
+	{
+		str = (char *)(malloc(sizeof(char) * len + 1));
+	}
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
