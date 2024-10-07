@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:33:04 by davidma2          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/10/07 15:37:59 by davidma2         ###   ########.fr       */
+=======
+/*   Updated: 2024/10/07 12:36:41 by davidmartin      ###   ########.fr       */
+>>>>>>> d51a4230f2f65c49c6f27013852dc80c7a04c53c
 /*                                                                            */
 /* ************************************************************************** */
 
