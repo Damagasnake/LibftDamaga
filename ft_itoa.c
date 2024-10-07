@@ -6,7 +6,7 @@
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:33:04 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 12:30:56 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/07 12:36:41 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-//1032 /10
