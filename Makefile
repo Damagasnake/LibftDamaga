@@ -5,16 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/26 10:00:31 by davidma2          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2024/10/07 13:03:20 by davidmartin      ###   ########.fr        #
-=======
-<<<<<<< HEAD
-#    Updated: 2024/10/07 15:06:01 by davidma2         ###   ########.fr        #
-=======
-#    Updated: 2024/10/07 12:14:28 by davidmartin      ###   ########.fr        #
->>>>>>> d51a4230f2f65c49c6f27013852dc80c7a04c53c
->>>>>>> 25605366150166c8764d9316d55d97d3e5104fdb
+#    Created: 2024/10/07 16:34:16 by davidmartin       #+#    #+#              #
+#    Updated: 2024/10/07 16:34:32 by davidmartin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
