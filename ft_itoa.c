@@ -6,11 +6,12 @@
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:33:04 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 16:11:21 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/07 17:25:15 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	countdigits(int i)
 {
@@ -37,12 +38,10 @@ char	*ft_itoa(int n)
 
 	nbr = n;
 	len = countdigits(n);
-	if(i < 0) 
-	str = (char *)(malloc(sizeof(char) * len + 2));
-	else if (i > 0)
-	{
+	if(n < 0) 
+		str = (char *)(malloc(sizeof(char) * len + 2));
+	else
 		str = (char *)(malloc(sizeof(char) * len + 1));
-	}
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
