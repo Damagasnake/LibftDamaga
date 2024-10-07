@@ -6,12 +6,11 @@
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:33:04 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 17:25:15 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/07 18:22:48 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	countdigits(int i)
 {

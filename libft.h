@@ -6,13 +6,14 @@
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 17:46:53 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/07 18:17:11 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
+#include <stdlib.h>
 
 int		ft_isprint(int c);
 int		ft_isalpha(int c);
