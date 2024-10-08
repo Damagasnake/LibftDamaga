@@ -6,7 +6,7 @@
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 18:17:11 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/08 08:26:28 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_putendl_fd(char *s, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-int		ft_putchar(int c, int fd);
+int		ft_putchar_fd(int c, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
