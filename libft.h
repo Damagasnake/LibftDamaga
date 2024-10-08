@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/10/08 08:26:28 by davidmartin      ###   ########.fr       */
-=======
-/*   Updated: 2024/10/07 20:28:34 by davidma2         ###   ########.fr       */
->>>>>>> a0d73d026903995b5d0694e24d8dcb30c2c7b820
+/*   Updated: 2024/10/08 08:38:54 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
