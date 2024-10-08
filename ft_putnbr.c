@@ -1,19 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/27 12:46:42 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/08 19:10:47 by davidmartin      ###   ########.fr       */
+/*   Created: 2024/10/08 18:56:04 by davidmartin       #+#    #+#             */
+/*   Updated: 2024/10/08 18:56:35 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putendl_fd(char *s, int fd)
-{
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n',fd);
-}
