@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/10/08 08:26:28 by davidmartin      ###   ########.fr       */
+=======
+/*   Updated: 2024/10/07 20:28:34 by davidma2         ###   ########.fr       */
+>>>>>>> a0d73d026903995b5d0694e24d8dcb30c2c7b820
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +39,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-char	*strnstr(const char *big, const char *little, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_isspace(char c);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
@@ -48,4 +52,5 @@ char	*ft_strtrim(char const *s1, char const *set);
 int		ft_putchar_fd(int c, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
 #endif
