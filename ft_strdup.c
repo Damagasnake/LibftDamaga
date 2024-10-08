@@ -6,21 +6,20 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 12:43:36 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/02 10:21:54 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/08 12:24:19 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 #include <string.h>
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	char	*ptr;
+	char	*src;
 
-	ptr = (char *)malloc(strlen(s) + 1);
-	if (ptr == NULL)
+	src = (char *)malloc(ft_strlen(s) + 1);
+	if (src == NULL)
 		return (NULL);
-	strcpy(ptr, s);
-	return (ptr);
+	ft_strlcpy(src, s, ft_strlen(s) + 1);
+	return (src);
 }

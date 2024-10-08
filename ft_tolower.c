@@ -6,19 +6,15 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 10:09:59 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/02 10:25:23 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:52:24 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
-	{
-		c = c + 32;
-	}
-	return (1);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
 	return (c);
 }

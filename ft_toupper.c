@@ -6,12 +6,11 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 09:58:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/03 14:32:29 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/08 11:44:26 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 int	ft_toupper(int c)
 {
