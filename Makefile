@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+         #
+#    By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/07 16:34:16 by davidmartin       #+#    #+#              #
-#    Updated: 2024/10/07 16:34:32 by davidmartin      ###   ########.fr        #
+#    Updated: 2024/10/08 10:14:26 by davidma2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 		
 fclean: clean
 	$(RM) $(NAME)
