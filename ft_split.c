@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/09 13:25:19 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:56:44 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,18 +62,17 @@ static void	countstr(const char *s, int *nstr, char c)
 		}
 	}
 }
-static void	divide_s(const char *s, char *substr, char c, char **res)
+static void	divide_s(const char *s, char c, char **res)
 {
-	int i;
-	int start;
-	int index;
-	int len;
-	
+	int	i;
+	int	start;
+	int	index;
+	int	len;
+	int	*substr;
+
 	i = 0;
 	index = 0;
 	res = 0;
-	len = ft_strlen(s);
-
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -88,9 +87,7 @@ static void	divide_s(const char *s, char *substr, char c, char **res)
 			if (substr == NULL)
 			{
 				while (index > 0)
-				{
 					free(res[--index]);
-				}
 				free(res);
 				return (NULL);
 			}
@@ -100,4 +97,3 @@ static void	divide_s(const char *s, char *substr, char c, char **res)
 		}
 	}
 }
-a
