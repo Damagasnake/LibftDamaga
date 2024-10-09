@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/09 11:38:26 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:20:28 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,29 @@ char	**ft_split(char const *s, char c)
 	index = 0;
 	nstr = 0;
 	i = 0;
-	if (s == NULL)
+	countstr(s, &nstr, c);
+	res = allocatemem(nstr);
+	// insert static 3
+	res[index] = NULL;
+	return (res);
+}
+static char	**allocatemem(int nstr)
+{
+	char	**res;
+
+	res = (char **)malloc(sizeof(char *) * (nstr + 1));
+	if (res == NULL)
 		return (NULL);
-	while (s[i] && s[i + 1] != c && s[i] != c)
+	return (res);
+}
+static void	countstr(const char *s, int *nstr, char c)
+{
+	int	i;
+
+	i = 0;
+	if (s == NULL)
+		return ;
+	while (s[i] && (s[i + 1] != c || s[i] != c))
 		i++;
 	i = 0;
 	while (s[i])
@@ -36,18 +56,24 @@ char	**ft_split(char const *s, char c)
 			i++;
 		else
 		{
-			nstr++;
+			(*nstr)++;
 			while (s[i] && s[i] != c)
 				i++;
 		}
 	}
-
-	res = allocatemem(nstr);
-	if (res == NULL)
-		return (NULL);
-
+}
+static void	divide_s(const char *s, char *substr, char c, char **res)
+{
+	int i;
+	int start;
+	int index;
+	int len;
+	
 	i = 0;
 	index = 0;
+	res = 0;
+	len = ft_strlen(s);
+
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -73,16 +99,4 @@ char	**ft_split(char const *s, char c)
 			index++;
 		}
 	}
-	res[index] = NULL;
-	return (res);
-}
-
-static char **allocatemem(int nstr)
-{
-	char **res;
-
-	res = (char **)malloc(sizeof(char *) * (nstr + 1));
-	if (res == NULL)
-		return (NULL);
-	return (res);
 }
