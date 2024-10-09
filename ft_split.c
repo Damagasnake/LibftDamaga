@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/09 13:20:28 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/09 13:25:19 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,3 +100,4 @@ static void	divide_s(const char *s, char *substr, char c, char **res)
 		}
 	}
 }
+a
