@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/09 14:56:44 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:28:19 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,18 @@ static void	countstr(const char *s, int *nstr, char c)
 		}
 	}
 }
+
+static void	checkNull(int *substr, int index, char **res)
+{
+	if (substr == NULL)
+	{
+		while (index > 0)
+			free(res[--index]);
+		free(res);
+		return (NULL);
+	}
+}
+
 static void	divide_s(const char *s, char c, char **res)
 {
 	int	i;
@@ -84,16 +96,9 @@ static void	divide_s(const char *s, char c, char **res)
 				i++;
 			len = i - start;
 			substr = (char *)malloc(sizeof(char) * (len + 1));
-			if (substr == NULL)
-			{
-				while (index > 0)
-					free(res[--index]);
-				free(res);
-				return (NULL);
-			}
+			checkNull(substr, index, res);
 			ft_strlcpy(substr, s + start, len + 1);
-			res[index] = substr;
-			index++;
+			res[index++] = substr;
 		}
 	}
 }
