@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/09 15:28:19 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/10 10:05:06 by davidmartin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ char	**ft_split(char const *s, char c)
 {
 	int		nstr;
 	int		i;
-	int		start;
-	char	*substr;
 	char	**res;
-	int		len;
 	int		index;
 
 	index = 0;
@@ -27,7 +24,6 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	countstr(s, &nstr, c);
 	res = allocatemem(nstr);
-	// insert static 3
 	res[index] = NULL;
 	return (res);
 }
