@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 20:59:55 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/02 10:21:16 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:45:03 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{
-		write(fd, &s, 1);
+		write(fd, s, 1);
 		s++;
 	}
 }

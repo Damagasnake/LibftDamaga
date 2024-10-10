@@ -3,30 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davidmartinezgallego <davidmartinezgall    +#+  +:+       +#+        */
+/*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/10 10:05:06 by davidmartin      ###   ########.fr       */
+/*   Updated: 2024/10/10 16:36:50 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <string.h>
+
+static char	**allocatemem(int nstr);
+static void	countstr(const char *s, int *nstr, char c);
+static void	checknull(char *substr, int index, char **res);
+static void	divide_s(const char *s, char c, char **res);
 
 char	**ft_split(char const *s, char c)
 {
 	int		nstr;
-	int		i;
 	char	**res;
 	int		index;
 
 	index = 0;
 	nstr = 0;
-	i = 0;
 	countstr(s, &nstr, c);
 	res = allocatemem(nstr);
+	if (res == NULL)
+		return (NULL);
+	divide_s(s, c, res);
 	res[index] = NULL;
 	return (res);
 }
+
 static char	**allocatemem(int nstr)
 {
 	char	**res;
@@ -36,6 +45,7 @@ static char	**allocatemem(int nstr)
 		return (NULL);
 	return (res);
 }
+
 static void	countstr(const char *s, int *nstr, char c)
 {
 	int	i;
@@ -59,28 +69,27 @@ static void	countstr(const char *s, int *nstr, char c)
 	}
 }
 
-static void	checkNull(int *substr, int index, char **res)
+static void	checknull(char *substr, int index, char **res)
 {
 	if (substr == NULL)
 	{
 		while (index > 0)
 			free(res[--index]);
 		free(res);
-		return (NULL);
+		return ;
 	}
 }
 
 static void	divide_s(const char *s, char c, char **res)
 {
-	int	i;
-	int	start;
-	int	index;
-	int	len;
-	int	*substr;
+	int		i;
+	int		start;
+	int		index;
+	int		len;
+	char	*substr;
 
 	i = 0;
 	index = 0;
-	res = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -92,8 +101,9 @@ static void	divide_s(const char *s, char c, char **res)
 				i++;
 			len = i - start;
 			substr = (char *)malloc(sizeof(char) * (len + 1));
-			checkNull(substr, index, res);
-			ft_strlcpy(substr, s + start, len + 1);
+			checknull(substr, index, res);
+			strncpy(substr, s + start, len);
+			substr[len] = '\0';
 			res[index++] = substr;
 		}
 	}
