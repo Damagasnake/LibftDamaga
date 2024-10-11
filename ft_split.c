@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/11 15:59:49 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/11 16:11:08 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ static void	divide_s(const char *s, char c, char **res)
 			{
 				substr = (char *)malloc(sizeof(char) * (len + 1));
 				checknull(substr, index, res);
-				strncpy(substr, s + i, len);
+				ft_strlcpy(substr, s + start, len + 1);
 				substr[len] = '\0';
 				res[index++] = substr;
 			}
