@@ -6,35 +6,13 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/10 16:36:50 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/11 10:54:31 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <string.h>
-
-static char	**allocatemem(int nstr);
-static void	countstr(const char *s, int *nstr, char c);
-static void	checknull(char *substr, int index, char **res);
-static void	divide_s(const char *s, char c, char **res);
-
-char	**ft_split(char const *s, char c)
-{
-	int		nstr;
-	char	**res;
-	int		index;
-
-	index = 0;
-	nstr = 0;
-	countstr(s, &nstr, c);
-	res = allocatemem(nstr);
-	if (res == NULL)
-		return (NULL);
-	divide_s(s, c, res);
-	res[index] = NULL;
-	return (res);
-}
 
 static char	**allocatemem(int nstr)
 {
@@ -108,3 +86,28 @@ static void	divide_s(const char *s, char c, char **res)
 		}
 	}
 }
+char	**ft_split(const char *s, char c)
+{
+	int		nstr;
+	char	**res;
+	int		index;
+
+	index = 0;
+	nstr = 0;
+	countstr(s, &nstr, c);
+	res = allocatemem(nstr);
+	if (res == NULL)
+		return (NULL);
+	divide_s(s, c, res);
+	res[index] = NULL;
+	return (res);
+}
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	string[] = "viva la vida";
+
+	return (0);
+}*/

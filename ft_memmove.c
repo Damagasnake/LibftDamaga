@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:47:53 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 20:16:01 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/11 11:06:33 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*source;
 	size_t			i;
 
-	if (!dest && !src)
-		return (NULL);
 	i = 0;
 	destino = (unsigned char *)dest;
 	source = (unsigned char *)src;

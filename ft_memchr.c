@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 16:58:35 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/10 17:27:11 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/11 11:08:08 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*str;
 	size_t			i;
 
-	if (!s && !c)
-		return (NULL);
 	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
