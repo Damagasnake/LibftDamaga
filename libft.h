@@ -6,13 +6,14 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/10 15:33:45 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/11 15:54:40 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <string.h>
 # include <unistd.h>
 
 int		ft_isprint(int c);
