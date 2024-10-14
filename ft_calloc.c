@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 10:27:11 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/07 19:19:18 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/14 18:03:15 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	totsize;
+	ssize_t	totsize;
 	void	*ptr;
 
+	if (count == 0 || size == 0)
+		return (malloc(0));
 	totsize = count * size;
 	if (totsize / size != count)
 	{

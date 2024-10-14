@@ -6,14 +6,13 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:03:42 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/10 15:35:27 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/14 14:47:45 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar_fd(int c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
-	return (0);
 }

@@ -5,102 +5,80 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 17:41:15 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/11 16:11:08 by davidma2         ###   ########.fr       */
+/*   Created: 2024/10/13 15:48:23 by davidma2          #+#    #+#             */
+/*   Updated: 2024/10/14 14:51:40 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**allocatemem(int nstr)
-{
-	char	**res;
-
-	res = (char **)malloc(sizeof(char *) * (nstr + 1));
-	if (res == NULL)
-		return (NULL);
-	return (res);
-}
-
-static void	countstr(const char *s, int *nstr, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
+	int	words;
 
 	i = 0;
-	if (s == NULL)
-		return ;
-	while (s[i] && (s[i + 1] != c || s[i] != c))
-		i++;
-	i = 0;
+	words = 0;
 	while (s[i])
 	{
 		if (s[i] == c)
 			i++;
 		else
 		{
-			(*nstr)++;
+			words++;
 			while (s[i] && s[i] != c)
 				i++;
 		}
 	}
+	return (words);
 }
 
-static void	checknull(char *substr, int index, char **res)
+void	free_space(char **res, int index)
 {
-	if (substr == NULL)
-	{
-		while (index > 0)
-			free(res[--index]);
-		free(res);
-		return ;
-	}
+	while (index >= 0)
+		free(res[index--]);
+	free(res);
 }
 
-static void	divide_s(const char *s, char c, char **res)
+char	**extract_words(char const *s, char c, char **res)
 {
-	int		i;
-	int		start;
-	int		index;
-	int		len;
-	char	*substr;
+	int	end;
+	int	start;
+	int	index;
 
-	i = 0;
+	end = 0;
 	start = 0;
 	index = 0;
-	len = 0;
-	while (s[i])
+	while (s[end])
 	{
-		if (s[i] != c)
+		if (s[end] == c)
 		{
-			start = i;
-			while (s[i] && s[i] != c)
-				i++;
-			len = i - start;
-			if (len != 0)
-			{
-				substr = (char *)malloc(sizeof(char) * (len + 1));
-				checknull(substr, index, res);
-				ft_strlcpy(substr, s + start, len + 1);
-				substr[len] = '\0';
-				res[index++] = substr;
-			}
+			end++;
+			start = end;
 		}
 		else
-			i++;
+		{
+			while (s[end] && s[end] != c)
+				end++;
+			res[index] = ft_substr(s, start, end - start);
+			if (res[index] == NULL)
+				return (free_space(res, index), NULL);
+			index++;
+		}
 	}
+	return (res[index] = NULL, res);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int		nstr;
 	char	**res;
 
-	nstr = 0;
-	countstr(s, &nstr, c);
-	res = allocatemem(nstr);
+	if (s == NULL)
+		return (NULL);
+	res = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (res == NULL)
 		return (NULL);
-	divide_s(s, c, res);
-	res[nstr] = NULL;
+	if (extract_words(s, c, res) == NULL)
+		return (NULL);
 	return (res);
 }
