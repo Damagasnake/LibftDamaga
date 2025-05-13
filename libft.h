@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 11:01:07 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/14 15:24:42 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/13 13:56:44 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 int		ft_isprint(int c);
 int		ft_isalpha(int c);
@@ -52,4 +53,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+int ft_putchar(char c);
+int ft_putstr(char *str);
+int ft_putnbr(int nmbr);
+int ft_uputnbr(unsigned int nmbr);
+int ft_printf_hex(unsigned int nmbr, const char format);
+int ft_pointersp(void *pt);
+int ft_res_print(va_list arguments, unsigned char c);
+int ft_printf(char const *res, ...);
+
 #endif

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_printf_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 10:27:11 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/17 11:55:29 by davidma2         ###   ########.fr       */
+/*   Created: 2024/11/22 00:33:49 by davidma2          #+#    #+#             */
+/*   Updated: 2024/12/11 14:10:42 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t count, size_t size)
+#include "ft_printf.h"
+int ft_printf_hex(unsigned int nmbr, const char format)
 {
-	ssize_t	totsize;
-	void	*ptr;
-
-	totsize = count * size;
-	ptr = malloc(totsize);
-	if (ptr == NULL)
-		return (NULL);
-	ft_memset(ptr, 0, totsize);
-	return (ptr);
+    int i;
+    char *nmbr_hex;
+    i = 0;
+    if(format == 'x')
+        nmbr_hex = "01234567890abcdef";
+    else
+        nmbr_hex = "0123456789ABCDEF";
+    if (nmbr >= 16)
+        {
+            i += ft_printf_hex(nmbr / 16, format);
+        }
+        i += ft_putchar(nmbr_hex[nmbr % 16]);
+        return(i);
 }

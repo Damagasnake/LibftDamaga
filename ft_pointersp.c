@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_pointersp.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 10:27:11 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/17 11:55:29 by davidma2         ###   ########.fr       */
+/*   Created: 2024/11/22 03:31:57 by davidma2          #+#    #+#             */
+/*   Updated: 2024/11/22 04:22:44 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t count, size_t size)
+#include "ft_printf.h"
+int ft_pointersp(void *pt)
 {
-	ssize_t	totsize;
-	void	*ptr;
+    int i;
 
-	totsize = count * size;
-	ptr = malloc(totsize);
-	if (ptr == NULL)
-		return (NULL);
-	ft_memset(ptr, 0, totsize);
-	return (ptr);
+    i = 0;
+    if(!pt)
+        return(ft_putstr("(nill)"));
+    i += ft_putstr("0x");
+    i += ft_printf_hex((unsigned long)pt, "x");
 }

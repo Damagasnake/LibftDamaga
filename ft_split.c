@@ -6,7 +6,7 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 15:48:23 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/14 14:51:40 by davidma2         ###   ########.fr       */
+/*   Updated: 2024/10/17 12:02:41 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,15 @@ char	**ft_split(char const *s, char c)
 	if (extract_words(s, c, res) == NULL)
 		return (NULL);
 	return (res);
+}
+#include <stdio.h>
+int main ()
+{
+	char **solution;
+	solution = ft_split("Hello!", 32);
+	if (solution)
+		printf("%s", solution[0]);
+	else
+		printf("nada");
+	return 0;
 }
