@@ -6,11 +6,11 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 03:31:57 by davidma2          #+#    #+#             */
-/*   Updated: 2024/11/22 04:22:44 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:06:34 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 int ft_pointersp(void *pt)
 {
     int i;
@@ -19,5 +19,6 @@ int ft_pointersp(void *pt)
     if(!pt)
         return(ft_putstr("(nill)"));
     i += ft_putstr("0x");
-    i += ft_printf_hex((unsigned long)pt, "x");
+    i += ft_printf_hex((unsigned long)pt, 'x');
+    return(i);
 }

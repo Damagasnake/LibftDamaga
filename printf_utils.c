@@ -6,11 +6,11 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 00:34:21 by davidma2          #+#    #+#             */
-/*   Updated: 2024/11/22 00:34:25 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:08:09 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 int ft_putchar(char c)
 {
   return (write(1, &c, 1));
@@ -36,7 +36,7 @@ int ft_putnbr(int nmbr)
   
   i = 0;
   if(nmbr == -2147483648)
-    return(ft_putstr(-2147483648));
+    return(ft_putstr("-2147483648"));
 if (nmbr < 0)
   {
     i += ft_putchar('-');

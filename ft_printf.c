@@ -6,11 +6,11 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 00:34:02 by davidma2          #+#    #+#             */
-/*   Updated: 2024/12/03 14:58:30 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/14 11:04:11 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 int ft_res_print(va_list arguments, unsigned char c)
 {
 	int i;
@@ -23,7 +23,7 @@ int ft_res_print(va_list arguments, unsigned char c)
 	else if (c == 's')
 		i += ft_putstr(va_arg(arguments, char *));
 	else if (c == 'd' || c == 'i')
-		i += ft_putstr(va_arg(arguments, int));
+		i += ft_putnbr(va_arg(arguments, int));
 	else if (c == 'u')
 		i += ft_uputnbr(va_arg(arguments, unsigned int));
 	else if (c == 'x' || c == 'X')
@@ -45,7 +45,7 @@ int ft_printf(char const *res, ...)
 	{
 		if(res[i] == '%' && res[i] + 1)
 		{
-			j += ft_res_printf(arguments, res[i + 1]);
+			j += ft_res_print(arguments, res[i + 1]);
 			i++;
 		}
 		else

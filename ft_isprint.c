@@ -6,12 +6,11 @@
 /*   By: davidma2 <davidma2@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 14:57:45 by davidma2          #+#    #+#             */
-/*   Updated: 2024/10/04 09:44:38 by davidma2         ###   ########.fr       */
+/*   Updated: 2025/05/14 10:57:44 by davidma2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 int	ft_isprint(int c)
 {
